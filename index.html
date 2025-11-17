@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>4 Header Content</title>
 
-    <!-- LINK CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -15,20 +14,23 @@
 
         <!-- NAVBAR -->
         <nav>
-            <div class="logo"></div>
+            <div class="logo">LOGO</div>
 
             <ul class="now-list">
                 <div class="now-links">
-                    <li>Home</li>
-                    <li>About</li>
-                    <li>Services</li>
-                    <li>Contact</li>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
                 </div>
 
                 <div class="now-buttons">
-                    <li class="btn-primary">Sign up</li>
+                    <li class="btn-primary"><a href="#">Sign up</a></li>
                 </div>
             </ul>
+
+            <!-- Mobile Menu Button -->
+            <div class="menu-toggle">☰</div>
         </nav>
 
         <!-- 4 BOX CONTENT -->
@@ -53,6 +55,16 @@
         </div>
 
     </div>
+
+    <script>
+        // Toggle Menu Mobile
+        const toggle = document.querySelector('.menu-toggle');
+        const navList = document.querySelector('.now-list');
+
+        toggle.addEventListener('click', () => {
+            navList.classList.toggle('active');
+        });
+    </script>
 
 </body>
 </html>
